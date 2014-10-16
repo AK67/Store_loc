@@ -1,0 +1,1 @@
+<dsp:importbean bean="/com/ss/droplet/GenerateStoreLocatorResponse"/><dsp:page><dsp:droplet name="GenerateStoreLocatorResponse"><dsp:oparam name="output"><dsp:valueof param="json" valueishtml="true"/></dsp:oparam></dsp:droplet></dsp:page>

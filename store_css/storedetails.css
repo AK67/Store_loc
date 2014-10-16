@@ -1,0 +1,213 @@
+#maincontent-wrapper
+{width :97%;
+}
+#content-wrapper
+{ width:100%;
+}
+h1
+{color:black;
+  font-size:14px;
+  font-weight:bold; 
+}
+#goback
+{position:absolute;
+   top:600px;
+   left:600px; 
+}
+
+
+
+#email
+{ cursor: pointer;
+  color:tomato;
+  font-size:16px;
+}
+
+#storeDetailMapTable {
+	position:relative;
+	top:-30px;
+	left:-30px;
+}
+#storesuggestions td  a{
+    color:#595959;
+	cursor:pointer;
+	
+}
+
+#maintable 
+{ 
+   position:relative;
+   left:-12px;
+}
+
+	
+.emailDirection {
+	-moz-box-shadow:inset 0px 1px 28px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 28px 0px #ffffff;
+	box-shadow:inset 0px 1px 28px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#ededed;
+	-webkit-border-top-left-radius:6px;
+	-moz-border-radius-topleft:6px;
+	border-top-left-radius:6px;
+	-webkit-border-top-right-radius:6px;
+	-moz-border-radius-topright:6px;
+	border-top-right-radius:6px;
+	-webkit-border-bottom-right-radius:6px;
+	-moz-border-radius-bottomright:6px;
+	border-bottom-right-radius:6px;
+	-webkit-border-bottom-left-radius:6px;
+	-moz-border-radius-bottomleft:6px;
+	border-bottom-left-radius:6px;
+	text-indent:0;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#777777;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:20px;
+	line-height:20px;
+	width:122px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #ffffff;
+}
+.emailDirection:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+	background-color:#dfdfdf;
+}.emailDirection:active {
+	position:relative;
+	top:1px;
+}
+
+.goBack {
+	-moz-box-shadow:inset 0px 1px 28px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 28px 0px #ffffff;
+	box-shadow:inset 0px 1px 28px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#ededed;
+	-webkit-border-top-left-radius:6px;
+	-moz-border-radius-topleft:6px;
+	border-top-left-radius:6px;
+	-webkit-border-top-right-radius:6px;
+	-moz-border-radius-topright:6px;
+	border-top-right-radius:6px;
+	-webkit-border-bottom-right-radius:6px;
+	-moz-border-radius-bottomright:6px;
+	border-bottom-right-radius:6px;
+	-webkit-border-bottom-left-radius:6px;
+	-moz-border-radius-bottomleft:6px;
+	border-bottom-left-radius:6px;
+	text-indent:0;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#777777;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:20px;
+	line-height:20px;
+	width:122px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #ffffff;
+}
+.goBack:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+	background-color:#dfdfdf;
+}.goBack:active {
+	position:relative;
+	top:1px;
+}
+
+
+#storenameheading
+{ font-weight:bold; 
+color:red;
+font-size:28px;
+}
+
+#storeaddress
+{font-family:"Times New Roman";
+ font-size:18px;
+
+}
+
+#storeimage
+{
+	margin-top:4px ; 
+	position:relative;
+	top:-15px;
+	border-style: solid;
+    border-width: 1px;
+	border-color:grey;
+	padding:4px;
+	
+}
+#imgcontainer
+{
+	
+}
+
+#details tr  :nth-child(1)
+{
+  margin-top:.7px;
+  margin-left:0px;
+}
+#description
+{  max-width:420px;
+   font-size:15px;
+}
+#coupon-map
+{  float:right;
+  
+}
+#storesuggestions
+{ BORDER:1px solid grey;
+  width:100%;
+clear:top;  
+ position:relative;
+ top:10px;
+
+}
+#storesuggestions td
+{  BORDER-right:1px solid grey;
+    
+}
+
+#coupon-image
+{ width:400px;
+}
+
+
+#stateTableBody a
+{ color:red;
+}
+#td_sendaddress
+{ margin-top:10px;
+}
+#stateTableBody a:hover
+{ text-decoration:underline;
+}
+
+
+.coupon-image-height{
+		height:150px;
+	}
+
+@-moz-document url-prefix() {	
+	.coupon-image-height{
+		height:200px;
+	}
+}
