@@ -123,14 +123,16 @@
                         <div id="loc-list">
                           <ul id="list"></ul>
                         </div>
-                      </td>
+                      </td>        
                      </tr>
-                  </table>
+                  </table>  
                 </td>
-                <td  style="overflow:visible;">
-                    <div id="map"></div>
+				
+                <td  style="overflow:visible;">    
+                    <div id="map" style="border:1px solid black"></div>					
                     <img src="/static/ss/images/loader.gif" id="maploaderimg"  > 
                 </td>
+				
               </tr>
             </table>
           </div> 

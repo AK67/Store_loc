@@ -263,7 +263,8 @@ $.fn.storeLocator = function(options) {
 	setBreadCrums_FS(searchstrbread);
 	
     //Get the user input and use it
-	 $('#maploaderimg').show();
+	
+	$('#maploaderimg').show();
 	 
     var userinput = $('#' + settings.inputID).val();
 
@@ -436,12 +437,19 @@ $.fn.storeLocator = function(options) {
 						}
 						statesArray[statesCounter++] = value;
 					} else if(key == 'city') {
-						//alert("locationData : " + value.toUpperCase() + " : " + pAddress.toUpperCase());						
-						if(value.toUpperCase() == pAddress.toUpperCase()) {
-							searchedBy = "city";														
+						//alert("locationData : " + value.toUpperCase() + " : " + pAddress.toUpperCase());
+						var cityName = pAddress;
+						if(pAddress.indexOf(",") != -1) {
+							var cityVal = pAddress.split(",");
+							cityName = cityVal[0];
+							//alert("locationData : " + value.toUpperCase() + " : " + cityName.toUpperCase());
+						}
+						if(value.toUpperCase() == cityName.toUpperCase()) {							
+							searchedBy = "city";		
+							searchByCity = "";
 						}
 						cityArray[cityCounter++] = value + "," + statesArray[statesCounter-1];
-					} else if(pAddress.indexOf(",") != -1){
+					} else if(pAddress.indexOf(",") != -1 && searchedBy != '') {
 						searchedBy = 'database';
 					}
 					
@@ -458,13 +466,9 @@ $.fn.storeLocator = function(options) {
 					}
                     locationData[key] = value;
                   }
-				  if(searchByCity.length > 1) {
-					if(locationData['state'] == searchByCity[1]) {
-						storeArray[storeCounter++] = locationData;
-					}
-				  } else {
-					storeArray[storeCounter++] = locationData;
-				  }
+				  
+				 storeArray[storeCounter++] = locationData;
+				 
                   if(!locationData['distance']){
                     locationData['distance'] = GeoCodeCalc.CalcDistance(orig_lat,orig_lng,locationData['lat'],locationData['lng'], GeoCodeCalc.EarthRadius);
                   }
@@ -619,16 +623,16 @@ $.fn.storeLocator = function(options) {
           else{
             if(settings.distanceAlert !== -1 && locationset[0]['distance'] > settings.distanceAlert){
               alert(settings.distanceErrorAlert + settings.distanceAlert + " " + distUnit + settings.distanceErrorAlert1);
-			 
             }
-			
           }
           
           //Create the map with jQuery
           $(function(){ 
 		       $('#maploaderimg').hide();
+			   /*
                $('#loc-list').addClass('blackborder');
 			  $('#map').addClass('blackborder');	
+			  */
              var key, value, locationData = {};
 
               //Instead of repeating the same thing twice below
@@ -752,15 +756,27 @@ $.fn.storeLocator = function(options) {
               //Google maps settings
               if((settings.fullMapStart === true && firstRun === true) || settings.zoomLevel === 0){
                 var myOptions = {
-                  mapTypeId: google.maps.MapTypeId.ROADMAP
+					mapTypeControl: false,
+					panControl: false,
+					rotateControl: false,
+					scaleControl: false,
+					zoomControl: false,
+					streetViewControl: false,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
                 };
                 var bounds = new google.maps.LatLngBounds ();
               }
               else{
                 var myOptions = {
-                  zoom: settings.zoomLevel,
-                  center: new google.maps.LatLng(orig_lat, orig_lng),
-                  mapTypeId: google.maps.MapTypeId.ROADMAP
+					zoom: settings.zoomLevel,
+					center: new google.maps.LatLng(orig_lat, orig_lng),
+					mapTypeControl: false,
+					panControl: false,
+					rotateControl: false,
+					scaleControl: false,
+					zoomControl: false,
+					streetViewControl: false,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
                 };
               }
               
@@ -971,19 +987,16 @@ $.fn.storeLocator = function(options) {
               }
 
           });
-		  
-		   
+		 
           
      try{
         FB.XFBML.parse(); 
     }catch(ex){}}  });
-    }); 
-	 
+    });
   }
-        	
+
   }
 
   });
 };
-
 })(jQuery);

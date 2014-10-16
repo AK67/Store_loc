@@ -2,9 +2,7 @@
 <head>
 
 <style>
-.infoTable
-{ min-height:170px;
-}
+
 #couponimg
 { position:absolute;
   top:6px;
@@ -33,34 +31,34 @@
   
 }
 
+#popupcont
+{ color:white;
+  margin-left:10px;
+  min-height:135px;
+}
 
 #fromContainer
 { display:none;
 }
-
 </style>
-
 </head>
 <div onload="deleter();"> 
 <div class="popupcont">
 {{#location}}
 
 <table class="InfoTable" width="100%">
-<script> 
-
-</script>
 	<tr>
-		<td colspan="3" >
+		<td colspan="6">
 		    <font color="red"><h1>{{name}}</h1></font>
-			<p width=100%><br/>{{address1}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+			<p width=100%><br/>{{address1}} </p>
 			{{city}}, {{state}} {{zipcode}}
 			<br/> Distance:{{distance}} miles
-			<br/> Directions: <span onclick="$('#fromContainer').show();" id="gotodirections">From here</span>  
-		 <div id="fromContainer" width=100%> From : <input type="text" id="saddr" size=14/> <button class="submit" onclick="showOnGmap('{{address1}},{{city}}');">Go</button> </div>	 
+			<br/> Directions: <span onclick="$('#fromContainer').show();" id="gotodirections">To here</span><br/>  
+		    From : <input type="text" style="width:65px;" id="saddr" /> <input type="button" value="Go" class="submit" onclick="showOnGmap('{{address1}},{{city}}');">
 
 		<!--<br/><a href="/store/account/storedetails.jsp?storeId={{storeid}}&strtlat={{strtlat}}&strtlng={{strtlng}}&searchterm={{searchterm}}&distlimit={{distancelimit}}"><b>More Detail</b></a> -->
 		</td>		
-		<td  align="right" rowspan="6" class="couponImgContainer"> <img  src="{{couponImage}}"  onerror="jQuery(this).hide(); " ></td>		
+		<td rowspan="6" class="couponImgContainer"> <img  src="{{couponImage}}"  onerror="jQuery(this).hide(); " ></td>		
 	</tr>	
 </table>
 
