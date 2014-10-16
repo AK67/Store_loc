@@ -1,5 +1,4 @@
 <script>
-
 function fire_SD(id)
 {     setURLParameter("storeId",id);
       showpopUP_EP();
@@ -45,7 +44,7 @@ function fire_SD(id)
 				
 			  	<br/>
 			  	<br/>
-	     		<div id="fb">  <fb:like href="{{storePage}}" layout="button_count" action="like" show_faces="false" share="false"></fb:like></div>
+	     		<div id="fb" style="height: 20px; overflow: hidden;">  <fb:like href="{{storePage}}" layout="button_count" action="like" show_faces="true" share="false"></fb:like></div>
 	 		</td>
 		</tr>
 	</table>

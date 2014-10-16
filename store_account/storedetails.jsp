@@ -90,7 +90,7 @@
 																		<a href="http://www.stagestores.com/store/todaysDeal" style="text-decoration:none" > <img src="/static/ss/images/storeicons/todaysdeals.png"/> <span class='redfont'><b> Today's Deals </b></span></a>
 																	</td>
 																	<td style="padding-left:5px;">
-																		<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+																		<div id="fb">  <fb:like href="<dsp:valueof param="store.facebookPage"/>" layout="button_count" action="like" show_faces="true" share="false"></fb:like></div>
 																	</td>
 																</tr>
 																<tr>

@@ -192,7 +192,14 @@ function initialize(lat, lng, name, add, city, state, zipcode, imgSrc) {
 	var myLatlng = new google.maps.LatLng(lat + .0043,lng);
 	var myOptions = {
 					   zoom: 15,
-					   center: myLatlng
+					   center: myLatlng,
+					   mapTypeControl: false,
+					   panControl: false,
+					   rotateControl: false,
+					   scaleControl: false,
+					   zoomControl: false,
+					   scrollwheel: false,
+					   draggable: false
 					}
 	var map = new google.maps.Map(document.getElementById("map-canvas"),myOptions);
 	var marker = new google.maps.Marker({
@@ -208,7 +215,7 @@ function initialize(lat, lng, name, add, city, state, zipcode, imgSrc) {
 												'<br/>' + add + '' +
 												'<br/>' + city + ', ' + state + ' ' + zipcode + '' +
 												'<br/> Goto Directions' +
-												'  <span onclick="showFromContainer()">| From here </span>' +
+												'  <span>| To here </span>' +
 												' <div id="fromContainer" width=100%> From : <input type="text" id="saddr" size=14/> <button class="submit" onclick="showOnGmap('+ "'"+add +','+city+"'"+');">Go</button> </div>'+
 								'</td>' +
 								'<td align="right" rowspan="6" ><img src=' + imgSrc + '  ></td>' +
